@@ -1,4 +1,5 @@
- Assignment 2: Requirements elicitation
+
+Assignment 2: Requirements elicitation
 
 Requerimentos: Introdução, Âmbito e Descrição
 OpenClinic é uma ferramenta para recolha de dados por via electrónica (EDC) e gestão de dados clinicos.
@@ -29,6 +30,7 @@ Funcionalidades/Requerimento actualmente implementados:
   Permite o envio de notificações electrónicas e envio de emails;
   Os dados recebidos são directamente tratados pelo openClinic;
   OPC não deve necessitar de qualquer treino por parte dos utilizadores;
+  Os formulários só são construidos uma vez;
 - Monitorizar e gerir dados clinicos;
 - Auditar atalhos e assinaturas eletrónicas;
 - Gerir e controlar acessos a aplicação;
@@ -40,6 +42,7 @@ Funcionalidades/Requerimento actualmente implementados:
 - Extrair dados para analise ou para relatórios;
 - Organização de pesquisas clínicas por estudo, protocolo ou site, cada com o seu próprio conjunto de utilizadores autorizados, sujeitos, 
   definições da matéria estudada e CRF's;
+- Suporta para multi-linguas.
 
 Requerimentos não funcionais:
 
@@ -58,3 +61,12 @@ Requerimentos não funcionais:
    específicos, encriptação SSL e auditoria para monitorizar acesso e troca por utilizadores;   
  - Possiblidade de armazenamento das base de dados numa Cloud, para evitar perda de dados e evitar que a aplicação tenha quebras;  
  - Recurso a API SOAP para aumento da segurança;
+ 
+Use Cases:
+    Construir um estudo no OpenClinica:
+    
+    Passo 1: Criar um estudo:
+             Criar e definir o objectivo do estudo;
+             Descrição e Status;
+             
+    
