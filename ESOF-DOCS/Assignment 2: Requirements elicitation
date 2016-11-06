@@ -3,109 +3,58 @@ Assignment 2: Requirements elicitation
 
 
 Requerimentos: Introdução, Âmbito e Descrição
-
-
-
 OpenClinic é uma ferramenta para recolha de dados por via electrónica (EDC) e gestão de dados clinicos.
 
-
-
 O objectivo da ferramenta é agregar informações de pacientes/utilizadores, lançar de estudos, triagens, permitindo a partipação por via electrónica 
-
 de utilizadores/pacientes.
 
 A ferramenta permite que as empresas que se dedicam a estudos clinicos, clinicas possam agregar e gerir informações de forma a reduzir os 
-
 custos administrativos.
 
-
-
 As novas funcionalidades podem ser requisitadas através do JIRA (https://www.atlassian.com/software/jira) ou comunicadas através do forum do OpenClinic.
-
-
 
 Funcionalidades/Requerimento actualmente implementados:
 
 - Criar eCRF's (Electronic Case Report Form), a industria define um eCRF como uma colecção de muitos dados, possivelmente sobre o mesmo paciente.
-
   Contudo é importante salvalguardar que o conceito é aplicado também a documentos em suporte de papel, pois os reguladores não podiam
-
   permitir que dados importantes escapassem a revisão só por terem sido obtidas por um meio não electronico.
-
   Segundo o conceito da FDA (Food and and Dug Administration), os eCRF são múltiplos forulários, são a compilação de todos os tipos de 
-
   dados que podem dizer respeito a um paciente.
 
 - Captura dados de forma compreensiva e segura neste caso por exemplo por CDIS ODM via SOAP API;
-
 - Automatizar tarefas rotineiras (Marcar consultas de pacientes, exames, gerir dados clinicos);
-
 - Lançar e acompanhar estudos clinicos através do OCP(OpenClinic Participate)
-
   Estes estudos podem ser 
-
   Envolve os pacientes, permitindo que estes enviem dados através dos seus dispositivos electrónicos;
-
   Permite o envio de notificações electrónicas e envio de emails;
-
   Os dados recebidos são directamente tratados pelo openClinic;
-
   OPC não deve necessitar de qualquer treino por parte dos utilizadores;
-
 - Monitorizar e gerir dados clinicos;
-
 - Auditar atalhos e assinaturas eletrónicas;
-
 - Gerir e controlar acessos a aplicação;
-
 - Importar e exportar dados através de (CDIS ODM XLM representacion), com vista a partilha de informação entre sistemas, estudos de forma
-
   segura e transparente;
-
 - Recurso a ferramentas para importação/expoetação de dados de dstatasets clinicos em spreasheets excel, base de dados locais e formatos
-
   de dados "legacy";
-
 - Gestão de dados para longitudinais para pacientes complexos e/ou recorrentes.
-
 - Extrair dados para analise ou para relatórios;
-
 - Organização de pesquisas clínicas por estudo, protocolo ou site, cada com o seu próprio conjunto de utilizadores autorizados, sujeitos, 
-
-definições da matéria estudada e CRF's;
-
-
-
-         
+  definições da matéria estudada e CRF's;
 
 Requerimentos não funcionais:
 
  - Fazer uso do modelo de dados operacionais (ODM), criado pelo consórcio de padrões de intercâmbios de dados clínicos. O modelo facilita o arquivo e intercâmbio dos metadados e dados para pesquisa clinica. ODM é representado em formato XML e é projectão para obter dados de várias fontes num único documento
-
  - Recurso a framework JAVA J2EE permitundo que a aplicação seja adaptavel a várias plataformas;
-
  - O servidor de OpenClinic deve fazer Uso do TomCat, The Apache Tomcat®;
-
  - Uso da base de dados relacionai:s postgreSQL (Open source) ou Oracle 10G, de forma a guarantir grande volume de informação, com qualidade.
-
  - Possiblidade de armazenamento das base de dados numa Cloud, para evitar perda de dados e evitar que a aplicação tenha quebras;
-
  - Uso da REST API, com possiblidade de recurso a SOAP API (com mais segurança);
 
- 
-
- 
-
-   Requerimentos em termos de qualidade:
+   Requerimentos não funcionais que garentem qualidade:
 
  - A velocidade das páginas CRF podem ser afectadas pelo número de campos em cada seccão, em CRF's extensos se as secções forem dividas
-
    a velocidade de leitura aumentará consideravelmente;
-
  - Parametros de privacidade e segurança em conformidade com 21 CRF Part 11 e HIPAA incluindo o uso de funções e privilégios, estudos
-
    específicos, encriptação SSL e auditoria para monitorizar acesso e troca por utilizadores;   
-
  - Possiblidade de armazenamento das base de dados numa Cloud, para evitar perda de dados e evitar que a aplicação tenha quebras;  
-
- - Recurso a SOAP API para aumento ;
+ - Recurso a API SOAP para aumento da segurança;
