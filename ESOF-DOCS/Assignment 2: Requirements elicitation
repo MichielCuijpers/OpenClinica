@@ -7,7 +7,8 @@ O objectivo da ferramenta é agregar informações de pacientes/utilizadores, la
 de utilizadores/pacientes.
 
 A ferramenta permite que as empresas que se dedicam a estudos clinicos, clinicas possam agregar e gerir informações de forma a reduzir os 
-custos administrativos.
+custos administrativos. Promove o uso de CRF's standard. O prazo de lançamento de estudos diminui pelo uso de templates CRF. Minimizar o custo
+de treino, implementação e validação.
 
 As novas funcionalidades podem ser requisitadas através do JIRA tickets (https://www.atlassian.com/software/jira) ou comunicadas através do forum do OpenClinic.
 Aqui também pode ser visualizadas as Issues, também por categoria e versão, gráficos de desenvolvimento, 
