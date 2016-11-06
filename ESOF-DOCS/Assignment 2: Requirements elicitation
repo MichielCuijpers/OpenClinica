@@ -5,13 +5,12 @@ Assignment 2: Requirements elicitation
 Requerimentos: Introdução, Âmbito e Descrição
 OpenClinic é uma ferramenta para recolha de dados por via electrónica (EDC) e gestão de dados clinicos.
 
-O objectivo da ferramenta é agregar informações de pacientes/utilizadores, lançar de estudos, triagens, permitindo a partipação por via electrónica 
-de utilizadores/pacientes.
+O objectivo da ferramenta é agregar informações de pacientes/utilizadores, lançar de estudos, triagens, permitindo a partipação 
+por via electrónica de utilizadores/pacientes.
 
 A ferramenta permite que as empresas que se dedicam a estudos clinicos, clinicas possam agregar e gerir informações de forma a reduzir os 
-custos administrativos. Promove o uso de CRF's standard. O prazo de lançamento de estudos diminui pelo uso de templates CRF. Minimizar o custo
-
-de treino, implementação e validação.
+custos administrativos. Promove o uso de CRF's standard. O prazo de lançamento de estudos diminui pelo uso de templates CRF. 
+Minimizar o custo de treino, implementação e validação.
 
 As novas funcionalidades podem ser requisitadas através do JIRA tickets (https://www.atlassian.com/software/jira) ou comunicadas através do forum do OpenClinic.
 Aqui também pode ser visualizadas as Issues, também por categoria e versão, gráficos de desenvolvimento, 
@@ -49,10 +48,13 @@ permitir que dados importantes escapassem a revisão só por terem sido obtidas 
 
 Requerimentos não funcionais:
 
- - Fazer uso do modelo de dados operacionais (ODM), criado pelo consórcio de padrões de intercâmbios de dados clínicos. O modelo facilita o arquivo e intercâmbio dos metadados e dados para pesquisa clinica. ODM é representado em formato XML e é projectão para obter dados de várias fontes num único documento
+ - Fazer uso do modelo de dados operacionais (ODM), criado pelo consórcio de padrões de intercâmbios de dados clínicos. 
+ O modelo facilita o arquivo e intercâmbio dos metadados e dados para pesquisa clinica. ODM é representado em formato XML e é 
+ projectão para obter dados de várias fontes num único documento
  - Recurso a framework JAVA J2EE permitundo que a aplicação seja adaptavel a várias plataformas;
  - O servidor de OpenClinic deve fazer Uso do TomCat, The Apache Tomcat®;
- - Uso da base de dados relacionai:s postgreSQL (Open source) ou Oracle 10G, de forma a guarantir grande volume de informação, com qualidade.
+ - Uso da base de dados relacionai:s postgreSQL (Open source) ou Oracle 10G, de forma a guarantir grande volume de informação, com 
+ qualidade.
  - Possiblidade de armazenamento das base de dados numa Cloud, para evitar perda de dados e evitar que a aplicação tenha quebras;
  - Uso da REST API, com possiblidade de recurso a SOAP API (com mais segurança);
 
