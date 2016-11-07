@@ -68,16 +68,11 @@ Requerimentos não funcionais:
  - Recurso a API SOAP para aumento da segurança;
  
 Use Cases:
+    Ficheiro em anexo.
     
-    Construir um estudo no OpenClinica:
-    
-    Passo 1: Criar um estudo:
-             Criar e definir o objectivo do estudo;
-             Descrição e Status;
+Domanin Model:
+    Ficheiro em anexo.
              
-    
-    
-    
     Participação:
     
     O trabalho foi desenvolvido por todos os elementos do grupo, com igual participação de todos os elementos através de reuniões de grupo.
