@@ -1,4 +1,4 @@
-Deployment View 
+OpenClinica/ESOF-DOCS/Deployment View.jpg OpenClinica/ESOF-DOCS/Deployment View.jpg Deployment View 
 [1] - Arquitectura seguida pelo projecto:
 
 A arquitetura do OpenClinic baseia num sistema distribuído assimétrico na qual o cliente requisita serviços de são disponiblizados
@@ -17,8 +17,8 @@ na qual o servidor também pode atuar com um cliente e estamos perante um "N-Tie
 [2] - Development View
 [3 - Deployment View][deploy_view]. 
 [4] - Process View
-
-[deploy_view]: 
+  
+[deploy_view]: OpenClinica/ESOF-DOCS/Deployment View.jpg 
       
 [Google Developers site][devsite-guide]. You can also view the generated
 [reference docs][javadoc] for a full list of classes and their methods.
