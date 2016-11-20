@@ -1,6 +1,8 @@
 
 
 
+
+
 Deployment View 
 [1] - Arquitectura seguida pelo projecto:
 
@@ -18,10 +20,6 @@ na qual o servidor também pode atuar com um cliente e estamos perante um "N-Tie
 
 [1] - Logical View 
 [2] - Development View
-3 - Deployment View]
-[[https://github.com/RMMPP/OpenClinica/blob/master/ESOF-DOCS/Deployment View.jpg||alt=octocat]]
-![Alt Text](https://github.com/{RMMPP}/{OpenClinic}/raw/{ESOF-DOCS}/Deployment View.jpg)
-(https://github.com/{RMMPP}/{OpenClinic}/raw/{ESOF-DOCS}/Deployment View.jpg)
-(OpenClinica/ESOF-DOCS/Deployment View.jpg) 
+[[3 - Deployment View|OpenClinica/ESOF-DOCS/Deployment View.jpg]]. 
 [4] - Process View
       
