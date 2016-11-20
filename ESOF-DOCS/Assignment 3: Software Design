@@ -13,9 +13,9 @@ No caso da utilização do protocolo SOAP supõem-se a instalação do Apache To
 Existe o caso em que quando são requisitados ou obtidos CRF’S estudos na Internet estamos na generalização do cliente-servidor, 
 na qual o servidor também pode atuar com um cliente e estamos perante um "N-Tier System".
 
-[1] - Logical View 
+[1] - Logical View     (anexado)
 [2] - Development View
-[3] - Deployment View 
+[3] - Deployment View  (anexado)
 [4] - Process View
 
 
