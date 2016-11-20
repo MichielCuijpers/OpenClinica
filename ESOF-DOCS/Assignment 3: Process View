@@ -1,0 +1,7 @@
+Uma vez que o nosso projecto se centra muito à volta de uma base de dados as interacções com a mesma são bastante reduzidas:
+
+- Criação de ficha de paciente.
+- Addição de pacientes a certos estudos.
+- Remoção ou gestão de pacientes presentes em estudos.
+- Colocação de resultados e conclusões.
+- Visualisação de conteudos, nomeadamente, de estudos disponibilizados por colegas.
