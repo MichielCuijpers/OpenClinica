@@ -1,1 +1,16 @@
+ 
+[1] - Arquitectura seguida pelo projecto:
 
+A arquitetura do OpenClinic baseia num sistema distribuído assimétrico na qual o cliente requisita serviços de são disponiblizados
+pela rede partilhada (local ou internet).
+Utiliza os seguintes protocolos: HTTP e os Web Services (REST ou SOAP).
+O tipo de dados suportado pelo WebService REST pode assumir dos seguintes tipos de dados: JSON, XML, YAML ou qualquer tipo de dados válidos
+para a Internet. O conjunto de operações suportadas pelo webService utilizado HTTP são por exemplo: POST, GET, PUT, DELETE etc…;
+
+No  estudo do OpenClinica, podemos conceptualizar o caso do report form como uma sequência de metadados modelados com o padrão CDISC ODM com extensões do OpenClinica.
+No caso da utilização do protocolo SOAP supõem-se a instalação do Apache Tomcat (Web application service).
+
+Existe o caso em que quando são requisitados ou obtidos CRF’S estudos na Internet estamos na generalização do cliente-servidor, 
+na qual o servidor também pode atuar com um cliente e estamos perante um "N-Tier System".
+
+[2] - 
