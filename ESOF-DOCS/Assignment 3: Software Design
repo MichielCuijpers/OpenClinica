@@ -1,4 +1,3 @@
-
 Deployment View 
 [1] - Arquitectura seguida pelo projecto:
 
@@ -16,6 +15,14 @@ na qual o servidor também pode atuar com um cliente e estamos perante um "N-Tie
 
 [1] - Logical View 
 [2] - Development View
-[[3 - Deployment View|OpenClinica/ESOF-DOCS/Deployment View.jpg]]. 
+[3 - Deployment View][deploy_view]. 
 [4] - Process View
+
+[deploy_view]: 
       
+[Google Developers site][devsite-guide]. You can also view the generated
+[reference docs][javadoc] for a full list of classes and their methods.
+
+[android-site]: https://developer.android.com/training/maps/index.html
+[devsite-guide]: https://developers.google.com/maps/documentation/android-api/utility/
+[javadoc]: http://googlemaps.github.io/android-maps-utils/javadoc/
