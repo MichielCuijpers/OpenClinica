@@ -1,7 +1,8 @@
-OpenClinica/ESOF-DOCS/Deployment View.jpg OpenClinica/ESOF-DOCS/Deployment View.jpg Deployment View 
 [1] - Arquitectura seguida pelo projecto:
 
-A arquitetura do OpenClinic baseia num sistema distribuído assimétrico na qual o cliente requisita serviços de são disponiblizados
+Devido a extensão do projecto OpenClinic, o estudo centrou-se no OpenClinicaCRF Data Service.
+
+A arquitetura do OpenClinicCRF Data Service baseia num sistema distribuído assimétrico na qual o cliente requisita serviços de são disponiblizados
 pela rede partilhada (local ou internet).
 Utiliza os seguintes protocolos: HTTP e os Web Services (REST ou SOAP).
 O tipo de dados suportado pelo WebService REST pode assumir dos seguintes tipos de dados: JSON, XML, YAML ou qualquer tipo de dados válidos
@@ -10,12 +11,14 @@ para a Internet. O conjunto de operações suportadas pelo webService utilizado 
 No  estudo do OpenClinica, podemos conceptualizar o caso do report form como uma sequência de metadados modelados com o padrão CDISC ODM com extensões do OpenClinica.
 No caso da utilização do protocolo SOAP supõem-se a instalação do Apache Tomcat (Web application service).
 
-Existe o caso em que quando são requisitados ou obtidos CRF’S estudos na Internet estamos na generalização do cliente-servidor, 
-na qual o servidor também pode atuar com um cliente e estamos perante um "N-Tier System".
+Na aplicação OpenClinic existe a possiblidade de serem requisitados ou obtidos CRF’S, estudos na Internet, e sendo assim estamos
+na generalização do cliente-servidor, na qual o servidor também pode atuar com um cliente, estando perante um "N-Tier System".
 
-[1] - Logical View     (anexado)
-[2] - Development View
-[3] - Deployment View  (anexado)
-[4] - Process View
+Devido a extensão do projecto o estudo foi centrado
+
+[2] - Logical View     (Em anexo)
+[3] - Development View
+[4] - Deployment View  (Em anexo)
+[5] - Process View
 
 
