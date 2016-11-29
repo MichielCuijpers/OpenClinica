@@ -1,9 +1,25 @@
+
+
 Discuss Software Testability and Reviews: 
 controllability, observability, isolateability, separation of concerns, understandability, heterogeneity.  
 Grade: 6pts
 
 Report Test Statistics and analytics:  e.g., number of test cases, percentage of coverage, number of flaky tests, etc. (see links of projects in moodle for inspiration)
 Grade: 8pts
+
+Não existem registos de testes ao software.
+
+Os erros são reportados JIRA. Uma plataforma que permite explorar por "issues" pendentes ou requisições de novas funcionalidades.
+Permite criar registo de novos erros e pedidos de funcionalidades.
+
+Depois de efectuarmos o teste ao software OpenClinica forma registados os dados:
+Compatiblilidade software: 100%
+Segurança:                  99%           (1 registo)
+Code Style:                 78%           (2771 registos)
+Performance:                93%           (264 registos)
+Unused Code:                71%           (1177 registos)
+
+No entanto estes testes traduzem-se especficamente em defeitos de codificação e não em desvios a especificação.
 
 Identify a new bug and/or correct a bug
 Grade: 6pts (identification: 4 points; correction: 2 points)
