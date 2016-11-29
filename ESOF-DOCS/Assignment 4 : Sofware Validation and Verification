@@ -12,7 +12,7 @@ Não existem registos de testes ao software.
 Os erros são reportados JIRA. Uma plataforma que permite explorar por "issues" pendentes ou requisições de novas funcionalidades.
 Permite criar registo de novos erros e pedidos de funcionalidades.
 
-Depois de efectuarmos o teste ao software OpenClinica forma registados os dados:
+Depois de efectuarmos o teste ao software OpenClinica, no "codacy" formam registados os seguintes dados:
 Compatiblilidade software: 100%
 Segurança:                  99%           (1 registo)
 Code Style:                 78%           (2771 registos)
