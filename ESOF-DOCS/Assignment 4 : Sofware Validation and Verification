@@ -1,18 +1,14 @@
 
-
-Discuss Software Testability and Reviews: 
+[1] - Discuss Software Testability and Reviews: 
 controllability, observability, isolateability, separation of concerns, understandability, heterogeneity.  
-Grade: 6pts
 
 A validação da versão mais recente do produto é efectuado pelos utilizadores que podem submeter o pedidosde alterações e 
 novas funcionalidades através da plataforma JIRA;
 Não existe documentação dos testes efectuados ao softwate;
 Existe no directório Core/Src/Test - Um teste de importação de dados e testes de ligação a base de dados.
 
-Report Test Statistics and analytics:  e.g., number of test cases, percentage of coverage, number of flaky tests, etc. (see links of projects in moodle for inspiration)
+[2] - Report Test Statistics and analytics:  e.g., number of test cases, percentage of coverage, number of flaky tests, etc. (see links of projects in moodle for inspiration)
 Grade: 8pts
-
-[2] -
 
 Os erros são reportados JIRA. Uma plataforma que permite explorar por "issues" pendentes ou requisições de novas funcionalidades.
 Permite criar registo de novos erros e pedidos de funcionalidades.
