@@ -1,8 +1,9 @@
 [1] - Discuss Software Testability and Reviews: 
-controllability, observability, isolateability, separation of concerns, understandability, heterogeneity.  
+controllability, observability, isolateability, separation of concerns, understandability, heterogeneityheterogeneity.  
 
 A validação da versão mais recente do produto é efetuada, pelos utilizadores que podem submeter o pedidos de alterações/correções e 
-novas funcionalidades através da plataforma JIRA;
+novas funcionalidades através da plataforma JIRA, ou seja a validação é sempre efectuadas pelos utilizadores quer sejam Clinicas, pacientes
+ou investigadores;
 
 Não encontramos documentos de testes efetuados ao software e os testes existentes não estão descritos/comentados, o que dificulta
 bastante em termos de controlabilidade, em alguns casos dispendiosos e impraticáveis.
@@ -12,14 +13,18 @@ esperados por vezes também estão comentados.
 Parece existir por parte dos programadores uma preocupação em separar os testes em função dos resultados esperados.
 
 "Isolateability": Com os testes existentes no software, as componentes podem ser testadas de forma isolada, com por exemplo o teste
-a connectividade DAO.
+a connectividade DAO. Para além disso, o JUNIT tem a particularidade de cada componente de cada classe poder ser testado de forma individual.
 
 "Understandability": Como já foi referido acima não existem documentação dos testes efetuados ao software, nem comentários suficientes,
 para compreeder facilmente sem leitura e interpretação do código. Ou seja, todo o processo de compreensão dos testes efetuados é moroso.
 
+"Heterogeneity": Como o software é desenvolvido em Java, e software é flexivel para que as alterações/requisitos dos utilizadores sejam
+facilmente implementadas. Para além disso o software baseia num sistema distribuido o que permite que o software seja partilhado na internet
+e corra em várias plataformas.
+
 [2] - Report Test Statistics and analytics
 
-Existem testes em JUNIT para:
+Existem testes em "JUNIT" (framework para testes automaticos na linguagem Java):
       - Teste de importação de dados, com validação de dados;
       - Testes de conectividade a base de dados, teste de login's;
       - Teste a entrada de expressões;
@@ -27,10 +32,13 @@ Existem testes em JUNIT para:
       - Teste ao serviços disponibilizados pela aplicação;
       - Verificação dos níveis de acesso para visualização e edição, no caso dos CRF's;
       
+Basicamente os testes existentes na aplicação são para verificações de conectividade a diferentes fontes de dados,
+analise de expressões, e teste a importação de dados.
+      
 Em alguns casos são criadas classes especificas para testes que são subclasses da classe TestCase da framework JUNIT.
 
 Os erros são reportados JIRA. Uma plataforma que permite explorar por "issues" pendentes ou requisições de novas funcionalidades.
-Permite criar registo de novos erros e pedidos de funcionalidades.
+Permite criar registo de novos erros e pedidos de funcionalidades. O "ciclo de vida", do estado é reportado também no "JIRA"
 
 Depois de efetuarmos o teste ao software OpenClinica, no "codacy" formam registados os seguintes dados:
 Compatiblilidade software: 100%
