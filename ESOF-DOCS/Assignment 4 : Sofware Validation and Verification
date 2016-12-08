@@ -1,11 +1,14 @@
-
 [1] - Discuss Software Testability and Reviews: 
 controllability, observability, isolateability, separation of concerns, understandability, heterogeneity.  
 
 A validação da versão mais recente do produto é efectuado pelos utilizadores que podem submeter o pedidosde alterações e 
 novas funcionalidades através da plataforma JIRA;
 
-Não encontramos documentos de testes efectuados ao software e os testes existentes não estão descritos/comentados.
+Não encontramos documentos de testes efectuados ao software e os testes existentes não estão descritos/comentados, o que dificulta
+bastante em termos de controlabilidade, em alguns casos dispendiosos e impraticaveis.
+Em termos de "Observability" é facil determinar se os testes passaram, através do output, com o resultado dos testes. Esses resultados
+esperados por vezes também estão comentados.
+
 
 Existem testes em JUNIT para:
       - Teste de importação de dados, com validaç
