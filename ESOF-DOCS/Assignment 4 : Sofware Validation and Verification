@@ -1,21 +1,21 @@
 [1] - Discuss Software Testability and Reviews: 
 controllability, observability, isolateability, separation of concerns, understandability, heterogeneity.  
 
-A validação da versão mais recente do produto é efectuado pelos utilizadores que podem submeter o pedidosde alterações e 
+A validação da versão mais recente do produto é efetuada, pelos utilizadores que podem submeter o pedidos de alterações/correções e 
 novas funcionalidades através da plataforma JIRA;
 
-Não encontramos documentos de testes efectuados ao software e os testes existentes não estão descritos/comentados, o que dificulta
-bastante em termos de controlabilidade, em alguns casos dispendiosos e impraticaveis.
+Não encontramos documentos de testes efetuados ao software e os testes existentes não estão descritos/comentados, o que dificulta
+bastante em termos de controlabilidade, em alguns casos dispendiosos e impraticáveis.
 
-Em termos de "Observability" é facil determinar se os testes passaram, através do output, com o resultado dos testes. Esses resultados
+Em termos de "Observability" é fácil determinar se os testes passaram, através do output, com o resultado dos testes. Esses resultados
 esperados por vezes também estão comentados.
-Parece existir por parte dos programadores uma preocupação em separar os testes em funçãos dos resultados esperados.
+Parece existir por parte dos programadores uma preocupação em separar os testes em função dos resultados esperados.
 
 "Isolateability": Com os testes existentes no software, as componentes podem ser testadas de forma isolada, com por exemplo o teste
 a connectividade DAO.
 
-"Understandability": Como já foi referido acima não existem documentação dos testes efectuados ao software, nem comentários suficientes,
-para comprender facilmente sem leitura e interpretação do código. Ou seja, todo o processo de compreensão dos testes efectuados e moroso.
+"Understandability": Como já foi referido acima não existem documentação dos testes efetuados ao software, nem comentários suficientes,
+para compreeder facilmente sem leitura e interpretação do código. Ou seja, todo o processo de compreensão dos testes efetuados é moroso.
 
 [2] - Report Test Statistics and analytics
 
@@ -24,7 +24,7 @@ Existem testes em JUNIT para:
       - Testes de conectividade a base de dados, teste de login's;
       - Teste a entrada de expressões;
       - Teste com vários formatos de datas;
-      - Teste ao serviços disponibilizadoes pela aplicação;
+      - Teste ao serviços disponibilizados pela aplicação;
       - Verificação dos níveis de acesso para visualização e edição, no caso dos CRF's;
       
 Em alguns casos são criadas classes especificas para testes que são subclasses da classe TestCase da framework JUNIT.
@@ -32,7 +32,7 @@ Em alguns casos são criadas classes especificas para testes que são subclasses
 Os erros são reportados JIRA. Uma plataforma que permite explorar por "issues" pendentes ou requisições de novas funcionalidades.
 Permite criar registo de novos erros e pedidos de funcionalidades.
 
-Depois de efectuarmos o teste ao software OpenClinica, no "codacy" formam registados os seguintes dados:
+Depois de efetuarmos o teste ao software OpenClinica, no "codacy" formam registados os seguintes dados:
 Compatiblilidade software: 100%
 Segurança:                  99%           (1 registo)
 Code Style:                 78%           (2771 registos)
