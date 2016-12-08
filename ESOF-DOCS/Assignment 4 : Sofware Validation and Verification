@@ -1,5 +1,4 @@
 
-
 [1] - Discuss Software Testability and Reviews: 
 controllability, observability, isolateability, separation of concerns, understandability, heterogeneity.  
 
@@ -14,7 +13,7 @@ Existem testes em JUNIT para:
       - Teste a entrada de expressões;
       - Teste com vários formatos de datas;
       - Teste ao serviços disponibilizadoes pela aplicação;
-      - Verificação dos níveis de acesso no caso dos CRF's;
+      - Verificação dos níveis de acesso para visualização e edição, no caso dos CRF's;
             
 Em alguns casos são criadas classes especificas para testes que são subclasses da classe TestCase da framework JUNIT.
 Parece existir por parte dos programadores uma preocupação em separar os testes em funçãos dos resultados esperados.
@@ -38,3 +37,5 @@ No entanto estes testes traduzem-se especficamente em defeitos de codificação 
 Grade: 6pts (identification: 4 points; correction: 2 points)
 
 You think your project has no bugs?! Then, you do need to have a compelling story for us to credit you 6pts! 
+
+Trabalho desenvolvido em grupo,  com partipação de todos os elementos do grupo.
