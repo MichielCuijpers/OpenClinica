@@ -51,4 +51,20 @@ No entanto estes últimos testes traduzem-se especficamente em defeitos de codif
 
 [3] - Identify a new bug and/or correct a bug
 
+No âmbito deste projecto tornou-se bastante difícil a identificação de novos bugs. Isto deve-se ao facto de que este projecto já se 
+encontra em circulação e todos os bugs que possam afectar o seu desempenho de forma significativa são sistematicamente corrigidos 
+pelos responsáveis pelo projecto.
+Tal como foi referido na secção anterior, usando o programa codacy conseguimos visualizar os bugs presentes no código e embora estes 
+existam em grande número são bastante negligenciáveis e facilmente corrigiveis visto que grande parte deles tratam-se de más 
+praticas ao nível da programação (ver exemplo 1), de variáveis declaradas que já não estão a ser utilizadas (ver exemplo 2) ou de 
+linhas de código que estão propícias a erros (ver exemplo 3)
+
+Legendas dos exemplos:
+Exemplo 1:
+Ao dar nomes a funções deve se utilizar a nomenclatura camelCase e evitar o uso de underscores. 
+Exemplo 2:
+Neste caso a variavel crfIndex não esta a ser utilizada e deve ser removida.
+Exemplo 3:
+Deve se evitar o uso de imports que não estejam a ser utilizados de forma a não causar dependências desnecessárias.
+
 Trabalho desenvolvido em grupo,  com partipação de todos os elementos do grupo.
