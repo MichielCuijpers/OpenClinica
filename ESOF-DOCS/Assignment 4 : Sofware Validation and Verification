@@ -14,6 +14,11 @@ Parece existir por parte dos programadores uma preocupação em separar os teste
 "Isolateability": Com os testes existentes no software, as componentes podem ser testadas de forma isolada, com por exemplo o teste
 a connectividade DAO.
 
+"Understandability": Como já foi referido acima não existem documentação dos testes efectuados ao software, nem comentários suficientes,
+para comprender facilmente sem leitura e interpretação do código. Ou seja, todo o processo de compreensão dos testes efectuados e moroso.
+
+[2] - Report Test Statistics and analytics
+
 Existem testes em JUNIT para:
       - Teste de importação de dados, com validação de dados;
       - Testes de conectividade a base de dados, teste de login's;
@@ -21,12 +26,8 @@ Existem testes em JUNIT para:
       - Teste com vários formatos de datas;
       - Teste ao serviços disponibilizadoes pela aplicação;
       - Verificação dos níveis de acesso para visualização e edição, no caso dos CRF's;
-            
+      
 Em alguns casos são criadas classes especificas para testes que são subclasses da classe TestCase da framework JUNIT.
-
-                                        
-[2] - Report Test Statistics and analytics:  e.g., number of test cases, percentage of coverage, number of flaky tests, etc. (see links of projects in moodle for inspiration)
-Grade: 8pts
 
 Os erros são reportados JIRA. Uma plataforma que permite explorar por "issues" pendentes ou requisições de novas funcionalidades.
 Permite criar registo de novos erros e pedidos de funcionalidades.
@@ -38,12 +39,8 @@ Code Style:                 78%           (2771 registos)
 Performance:                93%           (264 registos)
 Unused Code:                71%           (1177 registos)
 
-No entanto estes testes traduzem-se especficamente em defeitos de codificação e não em desvios a especificação.
-
+No entanto estes últimos testes traduzem-se especficamente em defeitos de codificação e não em desvios a especificação/requesitos.
 
 [3] - Identify a new bug and/or correct a bug
-Grade: 6pts (identification: 4 points; correction: 2 points)
-
-You think your project has no bugs?! Then, you do need to have a compelling story for us to credit you 6pts! 
 
 Trabalho desenvolvido em grupo,  com partipação de todos os elementos do grupo.
