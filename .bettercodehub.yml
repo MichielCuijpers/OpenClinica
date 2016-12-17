@@ -1,3 +1,4 @@
 exclude:
 - /Web/.*
 - /Ws/.*
+- /Core/.*
