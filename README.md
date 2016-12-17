@@ -38,4 +38,4 @@ To request a feature please submit a ticket on [Jira](https://jira.openclinica.c
 
 ## Bettercodehub
 [![BCH compliance](https://bettercodehub.com/edge/badge/RMMPP/OpenClinica)](https://bettercodehub.com)
-<img src='https://bettercodehub.com/edge/badge/RMMPP/OpenClinica'>
+
