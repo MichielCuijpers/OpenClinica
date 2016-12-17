@@ -36,3 +36,5 @@ To request a feature please submit a ticket on [Jira](https://jira.openclinica.c
 
 [GNU LGPL license](https://www.openclinica.com/gnu-lgpl-open-source-license)
 
+## Bettercodehub
+[![BCH compliance](https://bettercodehub.com/edge/badge/RMMPP/OpenClinica)](https://bettercodehub.com)
