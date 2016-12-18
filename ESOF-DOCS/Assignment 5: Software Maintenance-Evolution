@@ -1,5 +1,7 @@
-Das dez metricas existentes no betterCodeHub.com, não passaram as seguintes métricas (no caso do OpenClinic tivemos que analisar separadamente)
-os directórios as métricas apresentadas são para o código relacionado com o código para Web.
+Devido a extensão do código do openClinica, restringimos a analise do código ao directório Ws.
+Seria possível computar as métricas do directório Web e Core alterando o ficheiro de configuração 
+Das dez metricas existentes no betterCodeHub.com, 
+
 
 
 In particular, this report should discuss the following
