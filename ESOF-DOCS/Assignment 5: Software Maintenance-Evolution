@@ -1,6 +1,10 @@
 Devido a extensão do código do openClinica, restringimos a analise do código ao directório Ws.
-Seria possível computar as métricas do directório Web e Core alterando o ficheiro de configuração 
-Das dez metricas existentes no betterCodeHub.com, 
+Seria possível computar as métricas do directório Web e Core alterando o ficheiro de configuração betterCodeHub.yml
+Das dez metricas existentes no betterCodeHub.com, não obtivemos a verde os seguintes pontos:
+   - Keep Architecture Balanced;
+   - Automate Tests.
+   
+   
 
 
 
