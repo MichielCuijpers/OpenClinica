@@ -5,19 +5,9 @@ Das dez metricas existentes no betterCodeHub.com, não obtivemos a verde os segu
    - Keep Architecture Balanced;
    - Automate Tests.
    
-   Aqui salientamos que o sofware identificou testes automaticos ao sistema, produção de linhas de teste: 0 e linhas de teste: 0.
+   Aqui salientamos que o sofware não identificou testes automaticos ao sistema; produção de linhas de teste: 0 e linhas de teste: 0.
     
-   
-   
-
-
-
-In particular, this report should discuss the following
-Discuss Software Maintainability using the SIG metrics (plus add the badge to your .md file). 
-Students should contact the recitations professor in order to be added to the ESOF organization to be able to automatically compute
-the metrics of interest using the service https://bettercodehub.com/. See the pdf with an example of a report of the interesting metrics
-and a description of what they represent. Grade: 4pts.
-
+ 
 Report evolution process (change impact analysis and implementation)Briefly describe how the feature you decided to evolve was identified;
 why you decide to evolve that particular feature? How did you locate the parts in the source code that needed to be modified; etc. 
 Grade: 12pts
