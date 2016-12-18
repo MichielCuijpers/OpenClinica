@@ -1,10 +1,13 @@
+
 component_depth: 1
 languages:
 - java
 
-exclude:
-- /web/.*
-- /ws/.*
-- /core/.*
-- /.*
+
+test:
+  include:
+      - .*/integrationtests/.*.java
+      - .*TestFile.java
+      - /TestComponent/.*.java
+
 
