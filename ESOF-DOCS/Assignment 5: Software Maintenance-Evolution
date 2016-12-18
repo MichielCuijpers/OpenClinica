@@ -1,5 +1,6 @@
-The goal of this last assignment is to evolve a feature in the selected project and document how the process taken to evolve
-the feature (that is, document the change impact analysis and feature evolution)
+Das dez metricas existentes no betterCodeHub.com, não passaram as seguintes métricas (no caso do OpenClinic tivemos que analisar separadamente)
+os directórios as métricas apresentadas são para o código relacionado com o código para Web.
+
 
 In particular, this report should discuss the following
 Discuss Software Maintainability using the SIG metrics (plus add the badge to your .md file). 
