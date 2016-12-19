@@ -1,33 +1,47 @@
   
-Devido a extensão do código do openClinica, restringimos a analise do código ao directório Ws.
-Seria possível computar as métricas do directório Web e Core alterando o ficheiro de configuração betterCodeHub.yml
-Das dez metricas existentes no betterCodeHub.com, não obtivemos a verde os seguintes pontos:
+Devido a extensão do código do openClinica, restringimos a analise do código apenas ao directório WS.
+Seria possível computar as métricas do directório Web e Core, alterando o ficheiro de configuração betterCodeHub.yml, contudo
+seria necessário uma primeira análise para posterior configuração através dos "settings". Através de criação manual do ficheiro
+betterCodeHub.yml obtivemos sempre a mesma mensagem; número de linhas excede as 100k.
+
+Das dez métricas existentes no betterCodeHub.com, na analise do directório <WS>, não obtivemos a verde os seguintes pontos:
    - Keep Architecture Balanced;
    - Automate Tests.
    
-   Aqui salientamos que o sofware não identificou testes automaticos ao sistema; produção de linhas de teste: 0 e linhas de teste: 0.
-   Contudo existe o directório: OpenClinica/ws/src/test, que eventualmente devia ser reconhecido pelo sistema
+   Aqui salientamos que o software não identificou o directório de testes; produção de linhas de teste: 0 e linhas de teste: 0.
+   Contudo existe o directório: OpenClinica/ws/src/test, que eventualmente devia ser reconhecido pelo sistema. 
+   Esta informação pode e foi "forçada" através do ficheiro de configuração betterCodeHub.yml, contudo não houve alterações
+   ao reconhecimento do directório de testes.
+   Algumas das vezes em que utilizamos o software (betterCodeHub), a analise não chegava a ser executada totalmente.
     
-A nossa sugestão para evolução é controlar a controle de concorrência, ou seja bloquear registos a ser  editados.
-No nosso caso é ainda mais fundamental bloquear os registos (todos os estudos que estejam a ser editados).
-Este um aspecto é apontado nas funcionalidades a serem desenvolvidas, pois pode aconteçer que um utilizador/médico/investigador
-esteja a editar um estudo que esteja já a ser editado. 
-Como a edição de um estudo vai implicar escrever em várias tabelas, sugerimos que a implantação faça recurso de uma tabela
+A nossa sugestão para evolução (funcionalidade) é efectuar o  controle de concorrência, ou seja bloquear registos a ser  editados.
+No nosso caso é ainda mais fundamental bloquear tabelas que utilizem relações de um para muitos (por exemplo os vários registos
+de um estudo que estejam ser editados/vizualizados).
+
+Este é um tema que é apontado no forum do OpenClinica, na platadorma Jira, nas funcionalidades a serem desenvolvidas. Esta funcionalidade
+é importante porque pode aconteçer que um utilizador/médico/investigador esteja a editar sobre informação que já tenha sofrido update
+(actualização).
+Como a edição de um estudo vai implicar escrever em várias tabelas, sugerimos que a implementação faça recurso de uma tabela
 que poderá ser chamanda de LOCKS_FUNCOES. Nesta tabela será gravado o nome do processo a ser bloqueado, neste caso "STUDIES",
-o ID do <Study> e a hora actual do sistama, e um . A chave do tabela será composta pelo nome do processo  e pelo ID do <Study>.
-Cada vez que um estudo é visualizado/editado é gravado um na tabela LOCKS_FUNCOES essa informaçao. 
-      Cenários: 
+so  e pelo ID do <Study>.
+Cada vez que um estudo é visualizado/editado é gravado um na tabela LOCKS_FUNCOES essa informação. 
+      Cenários: o ID do <Study>, login do user, e a hora actual do sistama. A chave do tabela será composta pelo nome do proces
       -  Um utilizador visualiza informação e outro utilizador tenta gravar sem ter decorrido um time-out (diferença entre a hora do
          sistema e a hora registado no LOCKS_FUNCOES:
             O segundo utlizador recebe a informação que a função está bloqueada;
       -  Um utilizador visualiza informação e outro utlizador tenta gravar depois de decorrido o time-out:
             O registo do 1ª utilizador é apagado e gravado um novo registo para o 2º utilizador;
-            Se o 2º utilizador fizer update do estudo
+            Se o 2º utilizador fizer update ao estudo, se o 1º utilizador tentar fazer update ao estudo receberá a informação
+            que a informação que pretende actualizar já foi alterada por outro utilizador, sendo também efectuado um refresh 
+            da informações visualizadas nos "forms";
+            
+A função (metódo) para bloquear uma função dever ser global, visto ser usado por vários formulários da aplicação. Com parametros
+de entrada da função teremos o nome da função que estamos a bloquear (String), login (String) e chaveLoc (String).
+A função será chamada em todos os formulários que façam recurso de tabelas que utilizam a relação 1..*. Salientamos como foi
+referido acima o caso dos estudos.
+        
+        Passos do desenvolvimento:
+        - Execução do funcão bool bloqueia_funcao(string, string, string);
+        - Execução da função bool desbloqueia_funcao(string, String, String);
+        - Chamada de função cada vez que chamamos um estudo (para visualização/edição);
 
-
-Report evolution process (change impact analysis and implementation)Briefly describe how the feature you decided to evolve was identified;
-why you decide to evolve that particular feature? How did you locate the parts in the source code that needed to be modified; etc. 
-Grade: 12pts
-
-
-Link to pull requestGrade: 4ptsSubmission date (i.e., last commit to the repository): 23:59, 18-12-2016.
