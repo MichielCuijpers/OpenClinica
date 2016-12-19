@@ -8,7 +8,23 @@ Das dez metricas existentes no betterCodeHub.com, não obtivemos a verde os segu
    Aqui salientamos que o sofware não identificou testes automaticos ao sistema; produção de linhas de teste: 0 e linhas de teste: 0.
    Contudo existe o directório: OpenClinica/ws/src/test, que eventualmente devia ser reconhecido pelo sistema
     
- 
+A nossa sugestão para evolução é controlar a controle de concorrência, ou seja bloquear registos a ser  editados.
+No nosso caso é ainda mais fundamental bloquear os registos (todos os estudos que estejam a ser editados).
+Este um aspecto é apontado nas funcionalidades a serem desenvolvidas, pois pode aconteçer que um utilizador/médico/investigador
+esteja a editar um estudo que esteja já a ser editado. 
+Como a edição de um estudo vai implicar escrever em várias tabelas, sugerimos que a implantação faça recurso de uma tabela
+que poderá ser chamanda de LOCKS_FUNCOES. Nesta tabela será gravado o nome do processo a ser bloqueado, neste caso "STUDIES",
+o ID do <Study> e a hora actual do sistama, e um . A chave do tabela será composta pelo nome do processo  e pelo ID do <Study>.
+Cada vez que um estudo é visualizado/editado é gravado um na tabela LOCKS_FUNCOES essa informaçao. 
+      Cenários: 
+      -  Um utilizador visualiza informação e outro utilizador tenta gravar sem ter decorrido um time-out (diferença entre a hora do
+         sistema e a hora registado no LOCKS_FUNCOES:
+            O segundo utlizador recebe a informação que a função está bloqueada;
+      -  Um utilizador visualiza informação e outro utlizador tenta gravar depois de decorrido o time-out:
+            O registo do 1ª utilizador é apagado e gravado um novo registo para o 2º utilizador;
+            Se o 2º utilizador fizer update do estudo
+
+
 Report evolution process (change impact analysis and implementation)Briefly describe how the feature you decided to evolve was identified;
 why you decide to evolve that particular feature? How did you locate the parts in the source code that needed to be modified; etc. 
 Grade: 12pts
