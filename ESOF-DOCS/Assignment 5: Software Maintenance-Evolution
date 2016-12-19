@@ -1,4 +1,3 @@
-  
 Devido a extensão do código do openClinica, restringimos a analise do código apenas ao directório WS.
 Seria possível computar as métricas do directório Web e Core, alterando o ficheiro de configuração betterCodeHub.yml, contudo
 seria necessário uma primeira análise para posterior configuração através dos "settings". Através de criação manual do ficheiro
@@ -12,20 +11,22 @@ Das dez métricas existentes no betterCodeHub.com, na analise do directório <WS
    Contudo existe o directório: OpenClinica/ws/src/test, que eventualmente devia ser reconhecido pelo sistema. 
    Esta informação pode e foi "forçada" através do ficheiro de configuração betterCodeHub.yml, contudo não houve alterações
    ao reconhecimento do directório de testes.
-   Algumas das vezes em que utilizamos o software (betterCodeHub), a analise não chegava a ser executada totalmente.
+   Das vezes em que utilizamos o software (betterCodeHub), a analise não chegava a ser executada totalmente, fincando bloqueada.
     
-A nossa sugestão para evolução (funcionalidade) é efectuar o  controle de concorrência, ou seja bloquear registos a ser  editados.
-No nosso caso é ainda mais fundamental bloquear tabelas que utilizem relações de um para muitos (por exemplo os vários registos
-de um estudo que estejam ser editados/vizualizados).
+A nossa sugestão para evolução (funcionalidade) é efectuar o  controle de concorrência, ou seja bloquear a edição de "formulários"
+que possuam a relação de um para muitos (na vista lógica de arquitectura de 1..n)
 
 Este é um tema que é apontado no forum do OpenClinica, na platadorma Jira, nas funcionalidades a serem desenvolvidas. Esta funcionalidade
-é importante porque pode aconteçer que um utilizador/médico/investigador esteja a editar sobre informação que já tenha sofrido update
-(actualização).
+é importante porque pode aconteçer que um utilizador/médico/investigador esteja a editar sobre informação que já tenha sofrido "update"
+(actualizações).
 Como a edição de um estudo vai implicar escrever em várias tabelas, sugerimos que a implementação faça recurso de uma tabela
-que poderá ser chamanda de LOCKS_FUNCOES. Nesta tabela será gravado o nome do processo a ser bloqueado, neste caso "STUDIES",
-so  e pelo ID do <Study>.
-Cada vez que um estudo é visualizado/editado é gravado um na tabela LOCKS_FUNCOES essa informação. 
-      Cenários: o ID do <Study>, login do user, e a hora actual do sistama. A chave do tabela será composta pelo nome do proces
+que poderá ser chamanda de LOCKS_FUNCOES. Nesta tabela, e para o caso do estudos,
+será gravado o nome do processo a ser bloqueado, neste caso "STUDIES", ID do <Study>, login do utilizador e hora do sistema.
+A chave da tabela será dupla e será composta pelo nome do lock  da função e por uma ID.
+
+Para o caso do estudos e para cada vez que um estudo é visualizado/editado é gravado um na tabela LOCKS_FUNCOES essa informação.
+      
+      Cenários de uso do "LOCK" <STUDY>: 
       -  Um utilizador visualiza informação e outro utilizador tenta gravar sem ter decorrido um time-out (diferença entre a hora do
          sistema e a hora registado no LOCKS_FUNCOES:
             O segundo utlizador recebe a informação que a função está bloqueada;
@@ -34,14 +35,16 @@ Cada vez que um estudo é visualizado/editado é gravado um na tabela LOCKS_FUNC
             Se o 2º utilizador fizer update ao estudo, se o 1º utilizador tentar fazer update ao estudo receberá a informação
             que a informação que pretende actualizar já foi alterada por outro utilizador, sendo também efectuado um refresh 
             da informações visualizadas nos "forms";
+       -  No caso insert/update é suposto que o lock esteja activo para que se possa efectuar commit.
             
 A função (metódo) para bloquear uma função dever ser global, visto ser usado por vários formulários da aplicação. Com parametros
-de entrada da função teremos o nome da função que estamos a bloquear (String), login (String) e chaveLoc (String).
+de entrada da função teremos o nome do lock que estamos a bloquear (String), login (String) e chaveLoc (String).
 A função será chamada em todos os formulários que façam recurso de tabelas que utilizam a relação 1..*. Salientamos como foi
-referido acima o caso dos estudos.
+referido acima o caso do <STUDY>.
         
         Passos do desenvolvimento:
         - Execução do funcão bool bloqueia_funcao(string, string, string);
+          - Quando a função retonar false a mensagem de erro d
         - Execução da função bool desbloqueia_funcao(string, String, String);
-        - Chamada de função cada vez que chamamos um estudo (para visualização/edição);
+        - "Call" de função cada vez que chamamos um estudo (para visualização/edição);
 
