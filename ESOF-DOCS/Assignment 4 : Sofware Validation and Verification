@@ -55,20 +55,19 @@ Não existe documentação sobre "Flarky tests", bem como do seu número.
 [3] - Identify a new bug and/or correct a bug
 
  
- No âmbito deste projecto tornou-se bastante difícil a identificação de novos bugs. Isto deve-se ao facto de que este projecto já se 
- encontra em circulação e todos os bugs que possam afectar o seu desempenho de forma significativa são sistematicamente corrigidos 
- pelos responsáveis pelo projecto.
- Tal como foi referido na secção anterior, usando o programa codacy conseguimos visualizar os bugs presentes no código e embora estes 
- existam em grande número são bastante negligenciáveis e facilmente corrigiveis visto que grande parte deles tratam-se de más 
- praticas ao nível da programação (ver exemplo 1), de variáveis declaradas que já não estão a ser utilizadas (ver exemplo 2) ou de 
- linhas de código que estão propícias a erros (ver exemplo 3)
- 
- Legendas dos exemplos:
- Exemplo 1:
- Ao dar nomes a funções deve se utilizar a nomenclatura camelCase e evitar o uso de underscores. 
- Exemplo 2:
- Neste caso a variavel crfIndex não esta a ser utilizada e deve ser removida.
- Exemplo 3:
- Deve se evitar o uso de imports que não estejam a ser utilizados de forma a não causar dependências desnecessárias.
+No âmbito deste projecto tornou-se bastante difícil a identificação de novos bugs. Isto deve-se ao facto de que este projecto já se 
+encontra em circulação. Utilizando recursos como o Codacy conseguimos identificar vários bugs ao longo de todo o código. Estes bugs 
+aparecem maioritariamente, senão inteiramente, sob a forma de más práticas de programção. Muitos deles aparecem como variaveis que 
+se encontram erroneamente declaradas, variaveis declaradas que não são utilizadas, maus usos de variaveis “static” que podem levar 
+a problemas de segurança ou o uso de funções com nomes excessivamente longos ou complicados que dificultam a sua chamada posteriormente.
+
+A falta de testes torna muito dificil encontrar novos bugs problemáticos, estando assim dependente dos “issues” apontados por 
+utilizadores do programa, mas nesta situação a página encontra-se muito reduzida e com problemas não directamente relacionados 
+com o programa mas sim com a sua instalação, ou até problemas que dizem respeito a builds anteriores que já não são relevantes.
+
+Em suma a correcção de bugs basear-se-ia em pequenas mudanças em diversas linhas de código, ao apagamento  de linhas de código 
+desnecessárias e a recolocação de certas linhas de código. Todos estes problemas caem em problemas com o estilo de programação dos 
+programadores e não são problemas graves, sendo mais uma questão de legibilidade e menos de funcionamento.
+
  
 Trabalho desenvolvido em grupo,  com partipação de todos os elementos do grupo.
